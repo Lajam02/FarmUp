@@ -311,13 +311,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d5cd362951704e48b673db8d607f8c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  led:
+  queue:
+  - {fileID: 589913171}
   - {fileID: 1355790140}
   - {fileID: 2017453651}
   - {fileID: 2147099535}
-  - {fileID: 589913171}
   makeQueue: 0
-  nextPos: {x: 0, y: 0, z: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,6 +696,14 @@ PrefabInstance:
     - target: {fileID: 6651515196712793237, guid: f59f14ee39c0bc8449d283f42f403d12, type: 3}
       propertyPath: minCd
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651515196712793237, guid: f59f14ee39c0bc8449d283f42f403d12, type: 3}
+      propertyPath: maxMoveRadius
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651515196712793237, guid: f59f14ee39c0bc8449d283f42f403d12, type: 3}
+      propertyPath: minMoveRadius
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
