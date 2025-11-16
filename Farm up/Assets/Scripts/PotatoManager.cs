@@ -4,7 +4,7 @@ public class PotatoManager : MonoBehaviour
 {
 
 
-    [SerializeField] private List<PotatoManController> queue = new List<PotatoManController>();
+    [SerializeField] private List<NpcController> queue = new List<NpcController>();
 
 
     [SerializeField] private bool makeQueue = true;

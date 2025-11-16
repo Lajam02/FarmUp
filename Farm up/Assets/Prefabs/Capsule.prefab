@@ -10,9 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 666622255679206179}
   - component: {fileID: 231957439074676044}
-  - component: {fileID: 6651515196712793237}
-  - component: {fileID: 5005276219662692764}
-  - component: {fileID: 5241908985805507821}
+  - component: {fileID: 3436940720924183074}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -90,7 +88,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6651515196712793237
+--- !u!114 &3436940720924183074
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,47 +97,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 4869423304638538751}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ebf72cb813cf1645a64f5c7a54696c3, type: 3}
+  m_Script: {fileID: 11500000, guid: 2bb4f276181e5ac48992d53833ec5f70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  name: olaf
-  potatoType: {fileID: 4869423304638538751}
-  age: 2
-  minMoveRadius: 1
-  maxMoveRadius: 5
-  currentpos: {x: 0, y: 0, z: 0}
-  nextPos: {x: 0, y: 0, z: 0}
-  minCd: 0.5
-  maxCd: 4
---- !u!114 &5005276219662692764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4869423304638538751}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32123c9219857774cb19106683933426, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5241908985805507821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4869423304638538751}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfbdeff2800043e4ab0a57bfedff3682, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1
-  model: {fileID: 6651515196712793237}
-  view: {fileID: 5005276219662692764}
+  moveSpeed: 2
+  position: {fileID: 666622255679206179}
   makeQueue: 0
-  coolDown: 0
+  coolDown: 3
   isOncooldown: 0
-  radius: 41
+  radius: 3
+  minMoveRadius: 1
+  maxMoveRadius: 10
+  minCd: 1
+  maxCd: 4
