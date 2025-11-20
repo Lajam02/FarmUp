@@ -15,16 +15,18 @@ public class NpcController : MonoBehaviour
     [SerializeField] private float minCd = 3f;
 
     [SerializeField] private float maxCd = 12;
+
+    public bool isInQueue=false;
     public void Start()
     {
         //currentTarget = setTarget();
     }
     public void FixedUpdate()
     {
-        // if (!isOncooldown)
-        // {
-        //     moving();
-        // }
+        if (!isInQueue && !isOncooldown)
+        {
+            moving_first(currentTarget);
+        }
     }
     public void getCurrentTarget()
     {
@@ -42,23 +44,25 @@ public class NpcController : MonoBehaviour
         return coolDown = Random.Range(minCd, maxCd);
     }
 
-    public void moving_first(Vector3 direction)
+    public void setQueueState(bool queState)
     {
-        if (!isOncooldown)
-        {   
-            transform.position = Vector3.MoveTowards(transform.position, direction* 5f, moveSpeed * Time.fixedDeltaTime);
-            if (Vector3.Distance(transform.position, currentTarget) < 0.1f)
+        isInQueue = queState;
+    }
+
+    public void moving_first(Vector3 direction)
+    {      
+            transform.position = Vector3.MoveTowards(transform.position, direction, moveSpeed * Time.fixedDeltaTime);
+            if (Vector3.Distance(transform.position, direction) < 0.1f)
             {
                 StartCoroutine(StartCooldown());
             }
-        }
     }
     public void moving()
     {
+        
         if(Vector3.Distance(transform.position, currentTarget) > 0.56f){
             transform.position = Vector3.MoveTowards(transform.position, currentTarget, moveSpeed * Time.fixedDeltaTime);
         }
-        
     }
 
     IEnumerator StartCooldown()
@@ -71,6 +75,7 @@ public class NpcController : MonoBehaviour
 
         Debug.Log("Cooldown finished!");
         getCurrentTarget();
+        currentTarget = nextPos;
         isOncooldown = false;
     }
 }

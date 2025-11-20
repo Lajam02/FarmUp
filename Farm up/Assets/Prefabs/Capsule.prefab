@@ -102,11 +102,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   position: {fileID: 666622255679206179}
-  makeQueue: 0
   coolDown: 3
   isOncooldown: 0
   radius: 3
   minMoveRadius: 1
-  maxMoveRadius: 10
+  maxMoveRadius: 12
   minCd: 1
   maxCd: 4
+  isInQueue: 0

@@ -17,6 +17,8 @@ public class PotatoManController : MonoBehaviour
 
     [SerializeField] private float maxCd = 12;
 
+    public bool isInQueue = false;
+
     public PotatoManController(PotatoManModel Model, PotatoManView view)
     {
         this.model = Model;
@@ -29,10 +31,10 @@ public class PotatoManController : MonoBehaviour
     }
     public void FixedUpdate()
     {
-        // if (!isOncooldown)
-        // {
-        //     moving();
-        // }
+        if (!isInQueue)
+        {
+            moving();
+        }
     }
     public void setCurrentPos(Vector3 pos)
     {

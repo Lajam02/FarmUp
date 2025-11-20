@@ -23,10 +23,12 @@ public class PotatoManager : MonoBehaviour
         }if(Input.GetKey(KeyCode.D)){
             queue[0].moving_first(new Vector3(1,0,0));
         }
+        queue[0].setQueueState(false);
         for (int i = 1; i < queue.Count; i++){
             // if(i == 0){
             //     queue[i].moving_first();
             // }
+            queue[i].setQueueState(true);
             queue[i].setCurrentPos(queue[i-1].transform.position);
             queue[i].moving();
 
